@@ -1,0 +1,32 @@
+NEONMELT LEGAL SITE — SETUP CHECKLIST
+
+CONFIGURED SUPPORT EMAIL: mehmetcanbuyuklu@gmail.com
+
+1. Confirm this email address is monitored regularly.
+2. Confirm these assumptions are true:
+   - Publisher: Can Büyüklü, Türkiye
+   - Game: NeonMelt: Color Tunnel Dash
+   - Google AdMob is used
+   - No user accounts
+   - No in-app purchases
+   - No Firebase Analytics, Unity Analytics, Crashlytics, cloud saves or other data SDKs
+3. If an assumption is false, update the privacy policy before publishing.
+4. Upload index.html, privacy.html, terms.html, support.html and styles.css to the
+   root of the public GitHub repository named neonmelt-legal.
+5. In the repository: Settings > Pages > Source: Deploy from a branch > Branch:
+   main > Folder: /(root) > Save.
+6. Wait for the deployment, then test:
+   https://cantes21.github.io/neonmelt-legal/
+   https://cantes21.github.io/neonmelt-legal/privacy.html
+   https://cantes21.github.io/neonmelt-legal/terms.html
+   https://cantes21.github.io/neonmelt-legal/support.html
+7. App Store Connect:
+   - Privacy Policy URL: https://cantes21.github.io/neonmelt-legal/privacy.html
+   - Support URL: https://cantes21.github.io/neonmelt-legal/support.html
+   - Leave Apple's standard License Agreement unless a custom EULA is needed.
+   - Complete App Privacy answers based on all SDKs in the final build.
+8. In the Game's Settings screen add links to Privacy Policy, Terms of Use and
+    Support. Add a Privacy Choices button when required by Google UMP.
+
+This starter is based on the assumptions above and is not a substitute for
+advice from a qualified lawyer for your specific business and distribution.
