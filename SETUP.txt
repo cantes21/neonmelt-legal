@@ -6,7 +6,7 @@ CONFIGURED SUPPORT EMAIL: mehmetcanbuyuklu@gmail.com
 2. Confirm these assumptions are true:
    - Publisher: Can Büyüklü, Türkiye
    - Game: NeonMelt: Color Tunnel Dash
-   - Google AdMob is used
+   - Version 1.0 contains no advertising or Google AdMob
    - No user accounts
    - No in-app purchases
    - No Firebase Analytics, Unity Analytics, Crashlytics, cloud saves or other data SDKs
@@ -26,7 +26,10 @@ CONFIGURED SUPPORT EMAIL: mehmetcanbuyuklu@gmail.com
    - Leave Apple's standard License Agreement unless a custom EULA is needed.
    - Complete App Privacy answers based on all SDKs in the final build.
 8. In the Game's Settings screen add links to Privacy Policy, Terms of Use and
-    Support. Add a Privacy Choices button when required by Google UMP.
+   Support.
+9. Before adding AdMob, analytics, cloud saves, accounts or another data SDK in
+   a future update, revise the Privacy Policy and App Store privacy answers. Add
+   a Privacy Choices control when required by Google UMP.
 
 This starter is based on the assumptions above and is not a substitute for
 advice from a qualified lawyer for your specific business and distribution.
