@@ -1,0 +1,57 @@
+NEONMELT — APP STORE PRIVACY CHECKLIST
+Prepared 6 September 2026
+
+This is a submission checklist, not a substitute for the final Xcode privacy
+report or the current App Store Connect questionnaire.
+
+FINAL BUILD ASSUMPTIONS
+- iOS game with no account system or developer analytics.
+- Local gameplay progress, settings, coins and extra lives.
+- Google Mobile Ads Unity Plugin / Google AdMob.
+- Interstitial and optional rewarded ads.
+- Google UMP consent flow.
+- No mediation, in-app purchases, subscriptions, Firebase, Unity Analytics,
+  Crashlytics or cloud saves.
+
+LIKELY THIRD-PARTY DATA TYPES TO REVIEW IN APP STORE CONNECT
+Google states that the Mobile Ads SDK may process:
+- Coarse Location (derived from IP address)
+- Device ID
+- Advertising Data
+- Product Interaction
+- Crash Data
+- Performance Data
+
+Possible purposes include Third-Party Advertising and Analytics. Exact answers
+depend on the final SDK version, consent/ATT configuration, optional features
+and the final Xcode privacy report. Do not blindly copy this list: compare it
+with the generated Privacy Report and current Google documentation at submission.
+
+TRACKING
+- Mark data as used for tracking only if the submitted configuration and actual
+  behavior meet Apple's definition of tracking.
+- If ATT is requested, confirm NSUserTrackingUsageDescription is accurate and
+  that tracking/IDFA access does not occur before authorization.
+- If ATT is not requested, confirm the app does not access IDFA or perform
+  cross-app tracking.
+
+URLs
+Privacy Policy:
+https://cantes21.github.io/neonmelt-legal/privacy.html
+
+Support:
+https://cantes21.github.io/neonmelt-legal/support.html
+
+Terms:
+https://cantes21.github.io/neonmelt-legal/terms.html
+
+PRE-SUBMISSION TEST
+- UMP update runs on every app launch.
+- Ads load only after ConsentInformation.CanRequestAds() permits requests.
+- EEA/UK test geography shows the configured consent message.
+- Privacy Choices appears only when required and opens the UMP form.
+- Consent denial/limited-ad path does not block gameplay.
+- Reward is granted only from the verified reward callback.
+- Closing or failing a rewarded ad grants nothing.
+- Production ad-unit IDs are present in the archive.
+- Privacy policy and App Store privacy answers match the submitted binary.

@@ -3,14 +3,20 @@ NEONMELT LEGAL SITE — SETUP CHECKLIST
 CONFIGURED SUPPORT EMAIL: mehmetcanbuyuklu@gmail.com
 
 1. Confirm this email address is monitored regularly.
-2. Confirm these assumptions are true:
+2. Confirm these assumptions are true for the submitted build:
    - Publisher: Can Büyüklü, Türkiye
    - Game: NeonMelt: Color Tunnel Dash
-   - Version 1.0 contains no advertising or Google AdMob
+   - The Game uses Google AdMob / Google Mobile Ads Unity Plugin
+   - Ad formats: interstitial and optional rewarded advertisements
+   - Rewarded ads may grant coins, an extra life or a revive
+   - Google User Messaging Platform (UMP) is enabled before ad requests
    - No user accounts
    - No in-app purchases
    - No Firebase Analytics, Unity Analytics, Crashlytics, cloud saves or other data SDKs
-3. If an assumption is false, update the privacy policy before publishing.
+   - No mediation or additional ad-network SDKs are included
+3. If any assumption is false, update the privacy policy and App Store privacy
+   answers before publishing. If mediation is enabled, name/check every included
+   ad provider and its privacy manifest.
 4. Upload index.html, privacy.html, terms.html, support.html and styles.css to the
    root of the public GitHub repository named neonmelt-legal.
 5. In the repository: Settings > Pages > Source: Deploy from a branch > Branch:
@@ -24,12 +30,23 @@ CONFIGURED SUPPORT EMAIL: mehmetcanbuyuklu@gmail.com
    - Privacy Policy URL: https://cantes21.github.io/neonmelt-legal/privacy.html
    - Support URL: https://cantes21.github.io/neonmelt-legal/support.html
    - Leave Apple's standard License Agreement unless a custom EULA is needed.
-   - Complete App Privacy answers based on all SDKs in the final build.
-8. In the Game's Settings screen add links to Privacy Policy, Terms of Use and
-   Support.
-9. Before adding AdMob, analytics, cloud saves, accounts or another data SDK in
-   a future update, revise the Privacy Policy and App Store privacy answers. Add
-   a Privacy Choices control when required by Google UMP.
+   - Update App Privacy answers using APP_STORE_PRIVACY_CHECKLIST.txt and the
+     final Xcode privacy report. Include third-party SDK data practices.
+8. In the Game's Settings screen keep working links to Privacy Policy, Terms of
+   Use and Support. Show Privacy Choices only when Google UMP reports that an
+   entry point is required.
+9. In AdMob Privacy & messaging, publish the applicable regional message(s).
+   Test first-launch consent and the Privacy Choices form using UMP test mode.
+10. Confirm ads are requested only after UMP reports that ads can be requested.
+11. Confirm production builds use production ad-unit IDs and development builds
+    use Google's test IDs. Never test by clicking live ads.
+12. If Apple App Tracking Transparency is requested, provide an accurate
+    NSUserTrackingUsageDescription and test allow/deny paths on a physical device.
+    If ATT is not requested, do not add a misleading prompt solely because AdMob
+    is present.
+13. Before adding analytics, cloud saves, accounts, purchases, mediation or any
+    other SDK in a future update, revise the Privacy Policy, Terms and App Store
+    privacy answers again.
 
 This starter is based on the assumptions above and is not a substitute for
 advice from a qualified lawyer for your specific business and distribution.
